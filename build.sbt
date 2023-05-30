@@ -25,13 +25,14 @@ lazy val commonSettings = Seq(
   organization := "com.xebia",
   organizationHomepage := Some(new URL("https://www.47deg.com/"))
 )
+ThisBuild / version := "0.1.2-SNAPSHOT"
+
 
 lazy val root = project
   .in(file("."))
   .settings(commonSettings)
   .settings(
     name := "munit-snap-root",
-    version := "0.1.1",
     publish / skip := true
   )
   .aggregate(`munit-snap`)
@@ -41,7 +42,6 @@ lazy val `munit-snap` = project
   .settings(commonSettings)
   .settings(
     name := "munit-snap",
-    version := "0.1.0-SNAPSHOT",
     exportJars := true,
     autoAPIMappings := true,
     libraryDependencies += munit,
