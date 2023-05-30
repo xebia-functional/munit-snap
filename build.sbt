@@ -18,14 +18,15 @@ import Dependencies.Compile._
 import java.net.URL
 
 ThisBuild / scalaVersion := "3.2.2"
+ThisBuild / organization := "com.xebia"
+ThisBuild / versionScheme := Some("early-semver")
 
 lazy val commonSettings = Seq(
   organizationName := "Xebia Functional",
   startYear := Some(2023),
-  organization := "com.xebia",
   organizationHomepage := Some(new URL("https://www.47deg.com/"))
 )
-ThisBuild / version := "0.1.2-SNAPSHOT"
+ThisBuild / version := "0.1.3-SNAPSHOT"
 
 
 lazy val root = project
@@ -42,7 +43,6 @@ lazy val `munit-snap` = project
   .settings(commonSettings)
   .settings(
     name := "munit-snap",
-    exportJars := true,
     autoAPIMappings := true,
     libraryDependencies += munit,
     libraryDependencies += circe,
@@ -52,7 +52,7 @@ lazy val `munit-snap` = project
 
 ThisBuild / organization := "com.xebia"
 ThisBuild / homepage := Some(
-  url("https://github.com/xebia-functional/sbt-munit-compiler-toolkit")
+  url("https://github.com/xebia-functional/munit-snap")
 )
 ThisBuild / developers := List(
   Developer(
