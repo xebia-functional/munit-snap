@@ -16,7 +16,7 @@
 import Dependencies.Compile._
 
 import java.net.URL
-
+publish / skip := true
 ThisBuild / scalaVersion := "3.2.2"
 ThisBuild / organization := "com.xebia"
 ThisBuild / versionScheme := Some("early-semver")
@@ -26,8 +26,7 @@ lazy val commonSettings = Seq(
   startYear := Some(2023),
   organizationHomepage := Some(new URL("https://www.47deg.com/"))
 )
-ThisBuild / version := "0.1.3-SNAPSHOT"
-
+ThisBuild / version := "0.1.4-SNAPSHOT"
 
 lazy val root = project
   .in(file("."))
