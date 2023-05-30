@@ -16,7 +16,6 @@
 import Dependencies.Compile._
 
 import java.net.URL
-ThisBuild / publish / skip := true
 ThisBuild / scalaVersion := "3.2.2"
 ThisBuild / organization := "com.xebia"
 ThisBuild / versionScheme := Some("early-semver")
@@ -26,14 +25,13 @@ lazy val commonSettings = Seq(
   startYear := Some(2023),
   organizationHomepage := Some(new URL("https://www.47deg.com/"))
 )
-ThisBuild / version := "0.1.5-SNAPSHOT"
+ThisBuild / version := "0.1.6-SNAPSHOT"
 
 lazy val root = project
   .in(file("."))
   .settings(commonSettings)
   .settings(
     name := "munit-snap-root",
-    publish / skip := true
   )
   .aggregate(`munit-snap`)
 
@@ -43,7 +41,6 @@ lazy val `munit-snap` = project
   .settings(
     name := "munit-snap",
     autoAPIMappings := true,
-    publish / skip := false,
     libraryDependencies += munit,
     libraryDependencies += circe,
     libraryDependencies += circeGeneric,
