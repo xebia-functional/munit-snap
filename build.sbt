@@ -31,7 +31,7 @@ lazy val root = project
   .settings(commonSettings)
   .settings(
     name := "munit-snap-root",
-    version := "0.1.0-SNAPSHOT",
+    version := "0.1.0",
     publish / skip := true
   )
   .aggregate(`munit-snap`)
