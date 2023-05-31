@@ -25,7 +25,7 @@ lazy val commonSettings = Seq(
   startYear := Some(2023),
   organizationHomepage := Some(new URL("https://www.47deg.com/"))
 )
-ThisBuild / version := "0.1.6-SNAPSHOT"
+ThisBuild / version := "0.1.6"
 
 lazy val root = project
   .in(file("."))
